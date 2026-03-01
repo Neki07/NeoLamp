@@ -79,7 +79,7 @@ client.loop(timeout=0.1)
 st_autorefresh(interval=2000, key="refresh")
 
 # ===== PAGE =====
-st.title("💡 ESP32 Lamp Controller")
+st.title("💡 NeoLamp")
 
 data = st.session_state.get("mqtt_data", {})
 if data:
@@ -185,3 +185,4 @@ with col3:
         send_led_update(client, led_states, brightness)
         send_timer(client, timer_minutes)
         st.success(f"⏱ Timer started for {timer_minutes} minutes")
+
